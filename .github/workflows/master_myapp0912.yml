@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '/home/runner/work/hello-world/hello-world/webapp/target/webapp.war'
+          path: '/home/runner/work/hello-world/hello-world/webapp/target/*.war'
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,4 +51,4 @@ jobs:
           app-name: 'myapp0912'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9349151BF8594BA2967C4315B45D552C }}
-          package: 'webapp.war'
+          package: '*.war'
