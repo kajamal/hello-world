@@ -45,6 +45,6 @@ jobs:
           path: /home/runner/work/hello-world/hello-world/target/*.war
 
       - name: Deploy to Tomcat
-        uses: peter-evans/docker-compose-action@v3.3.3
+        uses: hello-world/docker-compose-action@v3.3.3
         with:
           compose-file: docker-compose.yml
