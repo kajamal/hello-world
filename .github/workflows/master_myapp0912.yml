@@ -51,4 +51,4 @@ jobs:
           app-name: 'javawebapp23'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: '*.war'
+          package: 'webapp-1.0-SNAPSHOT.war'
