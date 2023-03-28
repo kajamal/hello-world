@@ -1,3 +1,6 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Build and deploy WAR app to Azure Web App - myapp0912
 
 on:
@@ -25,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          path: '/home/runner/work/hello-world/hello-world/webapp/target/*.war'
 
   deploy:
     runs-on: ubuntu-latest
@@ -39,7 +42,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          path: /home/runner/work/hello-world/hello-world/target/*.war
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -49,4 +52,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: '*.war'
-        
