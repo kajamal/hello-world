@@ -51,5 +51,5 @@ jobs:
           app-name: 'appserver123'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: '*.war'
+          package: '.'
           
