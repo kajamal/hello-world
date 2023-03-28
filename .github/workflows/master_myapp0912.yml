@@ -51,4 +51,4 @@ jobs:
           app-name: 'javawebapp23'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-          package: '/home/runner/work/hello-world/hello-world/target/*.war'
+          
